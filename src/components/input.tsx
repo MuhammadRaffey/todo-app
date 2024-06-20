@@ -1,10 +1,27 @@
-import React from "react";
+import React, { ChangeEvent, FormEvent } from "react";
 
-const Input = () => {
+type InputProps = {
+  value: string;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onAdd: (e: FormEvent) => void;
+};
+
+const Input: React.FC<InputProps> = ({ value, onChange, onAdd }) => {
   return (
-    <div className="flex flex-row mx-5">
-      <input type="text" placeholder="Add Todo" className="rounded-sm" />
-      <button className="bg-blue-600 rounded-sm px-4 mx-2">Add</button>
+    <div className="flex flex-row mx-5 px-5  md:justify-start justify-center ">
+      <input
+        type="text"
+        placeholder="Add Todo"
+        value={value}
+        onChange={onChange}
+        className="rounded-sm px-4 text-black text-[20px] py-1"
+      />
+      <button
+        onClick={onAdd}
+        className="bg-blue-600 text-white rounded-sm px-4 mx-5 text-[20px]"
+      >
+        Add
+      </button>
     </div>
   );
 };

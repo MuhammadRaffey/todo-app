@@ -1,11 +1,4 @@
-type Todo = {
-  id: number;
-  title: string;
-  description: string;
-  completed: boolean;
-};
-
-const todos: Todo[] = [
+const todos = [
   {
     id: 1,
     title: "Learn Next.js",

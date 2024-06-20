@@ -1,12 +1,12 @@
+// pages/index.tsx
+
 import React from "react";
-import Input from "../components/input";
 import Todos from "../components/todo-list";
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
-    <div className="flex flex-col ">
-      <h1 className="font-bold text-center text-[30px]">Home</h1>
-      <Input />
+    <div className="flex flex-col">
+      <h1 className="font-bold text-center text-[30px] sm:p-5">Home</h1>
       <Todos />
     </div>
   );
