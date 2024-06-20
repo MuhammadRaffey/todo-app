@@ -62,7 +62,7 @@ const Todos: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col sm:text-[20px] text-[10px]">
       <Input
         value={newTodo}
         onChange={handleInputChange}

@@ -14,7 +14,7 @@ const Input: React.FC<InputProps> = ({ value, onChange, onAdd }) => {
         placeholder="Add Todo"
         value={value}
         onChange={onChange}
-        className="rounded-sm px-4 text-black text-[20px] py-1"
+        className="rounded-sm px-4 text-black sm:text-[20px] text-[10px] py-1"
       />
       <button
         onClick={onAdd}
