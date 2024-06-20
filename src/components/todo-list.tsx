@@ -70,7 +70,7 @@ const Todos: React.FC = () => {
       />
       <ul className="m-5">
         {todos.map((todo) => (
-          <li key={todo.id} className="flex flex-row items-center">
+          <li key={todo.id} className="flex flex-row items-center ">
             <input
               type="checkbox"
               checked={todo.completed}
@@ -82,7 +82,7 @@ const Todos: React.FC = () => {
                 type="text"
                 value={editTodo}
                 onChange={handleEditChange}
-                className="rounded-sm px-4 text-black text-[20px]"
+                className="rounded-sm px-4 text-black sm:text-[20px] text-[10px]"
               />
             ) : (
               <h2
@@ -100,14 +100,14 @@ const Todos: React.FC = () => {
                   : handleEditClick(todo.id, todo.title)
               }
               type="button"
-              className="bg-green-500 text-white px-4 py-1 rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 mx-2"
+              className="bg-green-500 text-white px-4 py-1 rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 mx-2 sm:text-[20px] text-[10px]"
             >
               {isEditing === todo.id ? "Save" : "Edit"}
             </button>
             <button
               onClick={() => handleDelete(todo.id)}
               type="button"
-              className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 mx-2"
+              className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 mx-1 sm:text-[20px] text-[10px]"
             >
               Delete
             </button>
