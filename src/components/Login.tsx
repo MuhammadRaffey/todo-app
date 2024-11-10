@@ -67,7 +67,7 @@ const Login = () => {
         <input
           id="username"
           {...register("username")}
-          className="p-2 border-2 border-gray-300 rounded bg-secondary text-primary font-semibold"
+          className="p-2 border-2 border-gray-300 rounded bg-secondary text-black font-semibold"
         />
         {errors.username && (
           <p className="text-red-500">{errors.username.message}</p>
@@ -81,7 +81,7 @@ const Login = () => {
           id="password"
           type="password"
           {...register("password")}
-          className="p-2 border-2 border-gray-300 rounded bg-secondary text-primary font-semibold"
+          className="p-2 border-2 border-gray-300 rounded bg-secondary text-black font-semibold"
         />
         {errors.password && (
           <p className="text-red-500">{errors.password.message}</p>
